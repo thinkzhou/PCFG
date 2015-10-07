@@ -87,3 +87,27 @@ class PCFG_EM:
                         q[tuple([A,B,C])]=0.0
             print 'OK'
         return q
+
+    def gen_sentence(self, symbol):
+        '''
+        Generalize sentence from pcfg
+        :param symbol:
+        :return:
+        '''
+        tokens=[]
+        for (A,w) in self.cfg.unary_rules:
+            if(A == symbol):
+                num = int(self.q.get((A,w))*1000)
+                for i in xrange(num):
+                    tokens.append(w)
+        for (A,B,C) in self.cfg.binary_rules:
+            if (A==symbol):
+                num = int(self.q.get((A,B,C)) * 1000)
+                for i in xrange(num):
+                    tokens.append(tuple([B,C]))
+        inx = int(random.uniform(0,len(tokens)))
+        next_symbol = tokens[inx]
+        if isinstance(next_symbol,tuple):
+            return self.gen_sentence(next_symbol[0])+' '+self.gen_sentence(next_symbol[1])
+        else:
+            return next_symbol
