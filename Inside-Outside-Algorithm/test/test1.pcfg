@@ -1,0 +1,8 @@
+NP->Hans 0.4
+NP->Maria 0.2
+NP->Hase 0.4
+V->mag 1.0
+V->streichelt 0.0
+S->NP VP 0.666666666667
+VP->V NP 1.0
+S->V NP 0.333333333333

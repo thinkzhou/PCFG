@@ -1,0 +1,17 @@
+VP->rolls 0.3
+VP->bounces 0.19
+Det->a 0.490066225166
+Det->the 0.509933774834
+Vt->touches 0.380952380952
+Vt->covers 0.619047619048
+Vi->is 1.0
+N->circle 0.317880794702
+N->square 0.370860927152
+N->triangle 0.311258278146
+P->above 0.566666666667
+P->below 0.433333333333
+S->NP VP 1.0
+NP->Det N 1.0
+VP->Vt NP 0.21
+VP->Vi PP 0.3
+PP->P NP 1.0
