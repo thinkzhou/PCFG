@@ -15,8 +15,9 @@ def train(cfg_file,train_file,iter_num=20):
         for (A,B,C) in cfg.binary_rules:
             f.writelines(A+'->'+B+' '+C+' '+str(state.get((A,B,C)))+'\n')
     with open(name+'.gen','w') as f:
-          for i in xrange(2000):
+          for i in range(2000):
               f.writelines(pcfg.gen_sentence('S')+'\n')
+
 if __name__ == '__main__':
     #train('test/emile.cfg','test/emile.train')
     #train('test/test2.cfg','test/test2.train')
@@ -25,6 +26,7 @@ if __name__ == '__main__':
     #train('test/test5.cfg','test/test5.train')
     #train('test/test3.cfg','test/test3.train')
     #train('test/test3.cfg','test/test3.gen')
+    #train('test/zhongwen.cfg','test/zhongwen.train')
 
 
 

@@ -47,15 +47,14 @@ class PCFG_EM:
 
     def EM(self, iter_num=50):
         q = self.q
-        for it in xrange(1,iter_num):
-            print 'start the',it,'th iterator'
+        for it in range(1,iter_num):
+            print('start the',it,'th iterator')
             f = defaultdict(float)
             for (A,w) in self.cfg.unary_rules:
                 f[tuple([A,w])] = 0.0
             for (A,B,C) in self.cfg.binary_rules:
                 f[tuple([A,B,C])] = 0.0
-
-            for i in xrange(1,self.train_num+1):
+            for i in range(1,self.train_num+1):
                 sentence = self.sentences[i-1]
                 ex_count = EX_COUNT(sentence=sentence,CFG=self.cfg,q =q)
                 count = ex_count.get_count()
@@ -85,7 +84,7 @@ class PCFG_EM:
                         q[tuple([A,B,C])] = (f[tuple([A,B,C])] / sum_f)
                     if(A2 ==A and f[tuple([A,B,C])] == 0.0):
                         q[tuple([A,B,C])]=0.0
-            print 'OK'
+            print('OK')
         return q
 
     def gen_sentence(self, symbol):
@@ -98,12 +97,12 @@ class PCFG_EM:
         for (A,w) in self.cfg.unary_rules:
             if(A == symbol):
                 num = int(self.q.get((A,w))*1000)
-                for i in xrange(num):
+                for i in range(num):
                     tokens.append(w)
         for (A,B,C) in self.cfg.binary_rules:
             if (A==symbol):
                 num = int(self.q.get((A,B,C)) * 1000)
-                for i in xrange(num):
+                for i in range(num):
                     tokens.append(tuple([B,C]))
         inx = int(random.uniform(0,len(tokens)))
         next_symbol = tokens[inx]

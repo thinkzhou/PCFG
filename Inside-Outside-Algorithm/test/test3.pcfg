@@ -1,30 +1,30 @@
-VP_sg->rolls 0.208333333333
-VP_sg->bounces 0.354166666667
-VP_pl->roll 0.134615384615
-VP_pl->bounce 0.384615384615
+VP_sg->rolls 0.20833333333333334
+VP_sg->bounces 0.3541666666666667
+VP_pl->roll 0.1346153846153846
+VP_pl->bounce 0.38461538461538464
 Det->the 1.0
-Vt_sg->touches 0.333333333333
-Vt_sg->covers 0.666666666667
-Vt_pl->touch 0.428571428571
-Vt_pl->cover 0.571428571429
+Vt_sg->touches 0.3333333333333333
+Vt_sg->covers 0.6666666666666666
+Vt_pl->touch 0.42857142857142855
+Vt_pl->cover 0.5714285714285714
 Vc_sg->is 1.0
 Vc_pl->are 1.0
 N_sg->circle 0.3
 N_sg->square 0.4
 N_sg->triangle 0.3
-N_pl->circles 0.355263157895
-N_pl->squares 0.276315789474
-N_pl->triangles 0.368421052632
-P->above 0.653846153846
-P->below 0.346153846154
+N_pl->circles 0.35526315789473684
+N_pl->squares 0.27631578947368424
+N_pl->triangles 0.3684210526315789
+P->above 0.6538461538461539
+P->below 0.34615384615384615
 S->NP_sg VP_sg 0.48
 S->NP_pl VP_pl 0.52
-NP->Det N_sg 0.478260869565
-NP->Det N_pl 0.521739130435
+NP->Det N_sg 0.4782608695652174
+NP->Det N_pl 0.5217391304347826
 NP_sg->Det N_sg 1.0
 NP_pl->Det N_pl 1.0
 VP_sg->Vt_sg NP 0.125
 VP_sg->Vc_sg PP 0.3125
-VP_pl->Vt_pl NP 0.269230769231
-VP_pl->Vc_pl PP 0.211538461538
+VP_pl->Vt_pl NP 0.2692307692307692
+VP_pl->Vc_pl PP 0.21153846153846154
 PP->P NP 1.0
