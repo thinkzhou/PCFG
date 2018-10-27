@@ -9,11 +9,15 @@ def train(cfg_file,train_file,iter_num=20):
     (name,ext) = os.path.splitext(train_file)
     state = pcfg.EM(iter_num=iter_num)
     with open(name+'.pcfg','w') as f:
-        for (A,w) in cfg.unary_rules:
-            f.writelines(A+'->'+w+' '+str(state.get((A,w)))+'\n')
-
         for (A,B,C) in cfg.binary_rules:
-            f.writelines(A+'->'+B+' '+C+' '+str(state.get((A,B,C)))+'\n')
+            f.writelines(A+' -> '+B+' '+C+' '+str(state.get((A,B,C)))+'\n')
+
+        for (A,w) in cfg.unary_rules:
+            f.writelines(A+' -> '+w+' '+str(state.get((A,w)))+'\n')
+
+        
+
+
     with open(name+'.gen','w') as f:
           for i in range(2000):
               f.writelines(pcfg.gen_sentence('S')+'\n')
