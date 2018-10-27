@@ -37,5 +37,7 @@ if __name__ == '__main__':
 
 ## References
 +    [Inside–outside algorithm](https://en.wikipedia.org/wiki/Inside–outside_algorithm)
+
 +    [The Inside-Outside Algorithm](http://www.cs.columbia.edu/~mcollins/io.pdf)
-+     [Note on the Inside-Outside Algorithm](https://www.cs.jhu.edu/~jason/465/iobasics.pdf)
+
++    [Note on the Inside-Outside Algorithm](https://www.cs.jhu.edu/~jason/465/iobasics.pdf)
