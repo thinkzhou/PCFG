@@ -23,16 +23,13 @@ A text file with .train extension with sentences you want to train your grammar 
 
 ## How to run it
 
-* Running examples:
-    Uncomment a line in a train.py file with one of the examples
+In the command line, type:
 
-* Running on your own grammars:
-    Change train.py to:
-
-```python
-if __name__ == '__main__':
-    train('[YOUR_CFG_FILE].cfg','[YOUR_TRAIN_FILE].train')
+```bash
+python train.py [YOUR_GRAMMAR_FILE].cfg [YOUR_TRAIN_FILE].train
 ```
+
+You can use some examples in the test folder, or try your own.
 
 
 ## References
